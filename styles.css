@@ -1,0 +1,126 @@
+.main {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    
+}
+
+.diana-id {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 42%;
+    left: 32%;
+    width: 35vw;
+    height: 53vh;
+    background-image: url(./assets/diana-id.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.di {
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: -100%;
+    left: 32%;
+    width: 36vw;
+    height: 48vh;
+    background-image: url(./assets/di.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#id-wrapper {
+    width: 47.25vw;
+    height: 30vw;
+    background-image: url(./assets/template.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#portrait {
+    opacity: 0;
+    position: absolute;
+    width: 12vw;
+    height: 17vw;
+    top: 7vw;
+    left: 1.5vw;
+    background-image: url(./assets/portrait.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+p {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(26, 26, 26);
+}
+
+.letter {
+    opacity: 0;
+}
+
+#lname {
+    position: absolute;
+    top: 4.5vw;
+    left: 19vw;
+}
+
+#fname {
+    position: absolute;
+    top: 7.3vw;
+    left: 19vw;
+}
+
+#dob {
+    position: absolute;
+    top: 9.9vw;
+    left: 19vw;
+}
+
+#loc1 {
+    position: absolute;
+    top: 11.5vw;
+    left: 19vw;
+}
+
+#date1 {
+    position: absolute;
+    top: 14.3vw;
+    left: 19vw;
+}
+
+#date2 {
+    position: absolute;
+    top: 14.3vw;
+    left: 29vw;
+}
+
+#num1 {
+    position: absolute;
+    top: 15.9vw;
+    left: 19vw;
+}
+
+#num2 {
+    position: absolute;
+    top: 18.85vw;
+    left: 19vw;
+}
+
+#loc2 {
+    position: absolute;
+    top: 20.28vw;
+    left: 19vw;
+}
