@@ -1,0 +1,215 @@
+$small: 200px;
+$medium: 768px;
+$large: 1200px;
+
+body {
+    overflow: hidden;
+}
+
+.main {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    
+}
+
+.diana-id {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: 42%;
+    left: 32%;
+    width: 35vw;
+    height: 53vh;
+    background-image: url(./assets/diana-id.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-device-width: $small) {
+        top: 38%;
+        left: 17%;
+        width: 71vw;
+        height: 55vh;
+    }
+
+    @media (min-device-width: $medium) {
+        top: 38%;
+        left: 29%;
+        width: 42vw;
+        height: 56vh;
+    }
+
+    @media (min-device-width: $large) {
+        top: 47%;
+        left: 36%;
+        width: 27vw;
+        height: 52vh;
+    }
+}
+
+.di {
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: -100%;
+    left: 32%;
+    width: 36vw;
+    height: 48vh;
+    background-image: url(./assets/di.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-device-width: $small) {
+        left: 17%;
+        width: 71vw;
+        height: 50vh;
+    }
+
+    @media (min-device-width: $medium) {
+        left: 29%;
+        width: 42vw;
+        height: 56vh;
+    }
+
+    @media (min-device-width: $large) {
+        left: 36%;
+        width: 27vw;
+        height: 56vh;
+    }
+}
+
+#id-wrapper {
+
+    background-image: url(./assets/template.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-device-width: $small) {
+        width: 92.25vw;
+        height: 57vw;
+    }
+
+    @media (min-device-width: $medium) {
+        width: 47.25vw;
+        height: 30vw;
+    }
+
+    @media (min-device-width: $large) {
+        width: 41.25vw;
+        height: 26vw;
+    }
+
+
+}
+
+#portrait {
+    opacity: 0;
+    position: absolute;
+    
+    background-image: url(./assets/portrait.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (min-device-width: $small) {
+        width: 24vw;
+        height: 33vw;
+        top: 12vw;
+        left: 2.5vw;
+    }
+
+    @media (min-device-width: $medium) {
+        width: 11vw;
+        height: 17vw;
+        top: 7vw;
+        left: 2.2vw;
+    }
+
+    @media (min-device-width: $large) {
+        width: 9vw;
+        height: 14vw;
+        top: 6.5vw;
+        left: 2.1vw;
+    }
+}
+
+p {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(26, 26, 26);
+
+    @media (min-device-width: $small) {
+        font-size: xx-large;
+    }
+    @media (min-device-width: $medium) {
+        font-size: smaller;
+    }
+    @media (min-device-width: $large) {
+        font-size: large;
+    }
+
+}
+
+.textarea {
+    position: absolute;
+    
+    @media (min-device-width: $small) {
+        left: 37vw;
+    }
+
+    @media (min-device-width: $medium) {
+        left: 19vw;
+    }
+
+    @media (min-device-width: $large) {
+        left: 16.5vw;
+    }
+}
+
+.letter {
+    opacity: 0;
+}
+
+
+@media (min-device-width: $small) {
+    #lname { top: 7.5vw; }
+    #fname { top: 12.8vw; }
+    #dob { top: 17.8vw; }
+    #loc1 { top: 20.8vw; }
+    #date1 { top: 26.2vw; }
+    #date2 { top: 26.2vw; left: 58vw; }
+    #num1 { top: 29.4vw; }
+    #num2 { top: 34.8vw; }
+    #loc2 { top: 37.8vw; }
+}
+@media (min-device-width: $medium) {
+    #lname { top: 4.5vw; }
+    #fname { top: 7.3vw; }
+    #dob { top: 10.1vw; }
+    #loc1 { top: 11.6vw; }
+    #date1 { top: 14.5vw; }
+    #date2 { top: 14.5vw; left: 29vw; }
+    #num1 { top: 16vw; }
+    #num2 { top: 18.9vw; }
+    #loc2 { top: 20.5vw; }
+}
+@media (min-device-width: $large) {
+    #lname { top: 4.5vw; }
+    #fname { top: 6.8vw; }
+    #dob { top: 9.1vw; }
+    #loc1 { top: 10.2vw; }
+    #date1 { top: 13vw; }
+    #date2 { top: 13vw; left: 26vw; }
+    #num1 { top: 14.3vw; }
+    #num2 { top: 16.8vw; }
+    #loc2 { top: 18.1vw; }
+}

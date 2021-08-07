@@ -1,5 +1,6 @@
 var elements = ["lname", "fname", "dob", "loc1", "date1", "date2", "num1", "num2", "loc2"];
 
+// Wrap each letter into a span
 let textWrapper;
 for (i = 0; i < elements.length; i++) {
     textWrapper = document.getElementById(elements[i]);
@@ -8,79 +9,19 @@ for (i = 0; i < elements.length; i++) {
 
 // Animate letters
 var animation = anime.timeline({loop: false})
-    .add({
-        targets: '#lname .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
-        targets: '#fname .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
-        targets: '#dob .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
-        targets: '#loc1 .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
-        targets: '#date1 .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
-        targets: '#date2 .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
-        targets: '#num1 .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
-        targets: '#num2 .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
-        targets: '#loc2 .letter',
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
-    .add({
+// for (i = 0; i < elements.length; i++) {
+//     animation.add({
+//         targets: `#${elements[i]} .letter`,
+//         opacity: [0,1],
+//         easing: "easeOutExpo",
+//         duration: 50,
+//         offset: '-=77',
+//         delay: (el, i) => 140 * (i+1)
+//     })
+// }
+
+//Add animation to elements
+animation.add({
         targets: '#portrait',
         opacity: [0, 1],
         easing: "easeOutExpo",
@@ -100,9 +41,10 @@ var animation = anime.timeline({loop: false})
         easing: "easeOutExpo",
     })
 
-    
-setTimeout(initFireworks, 13000);
+// Ignite
+setTimeout(initFireworks, 1000);
 
+// -----------------------
 /* Fireworks */
 window.addEventListener("resize", resizeCanvas, false);
 
