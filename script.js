@@ -1,48 +1,68 @@
-var elements = ["lname", "fname", "dob", "loc1", "date1", "date2", "num1", "num2", "loc2"];
+document.getElementById("congratsBtn").addEventListener("click", initCongrats);
 
-// Wrap each letter into a span
-let textWrapper;
-for (i = 0; i < elements.length; i++) {
-    textWrapper = document.getElementById(elements[i]);
-    textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
-}
+function initCongrats() {
+    document.getElementsByClassName("main")[0].style.display = "";
+    document.getElementsByClassName("diana-id")[0].style.display = "";
+    document.getElementsByClassName("di")[0].style.display = "";
+    document.getElementById("canvas").style.display = '';
 
-// Animate letters
-var animation = anime.timeline({loop: false})
-for (i = 0; i < elements.length; i++) {
+    var elements = ["lname", "fname", "dob", "loc1", "date1", "date2", "num1", "num2", "loc2"];
+
+    // Wrap each letter into a span
+    let textWrapper;
+    for (i = 0; i < elements.length; i++) {
+        textWrapper = document.getElementById(elements[i]);
+        textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+    }
+    
+
+    anime.timeline({loop: false})
+        .add({
+            targets: '.promt',
+            opacity: [1, 0]
+        })
+        .add({
+            targets: '.main',
+            opacity: [0, 1]
+        });
+
+    // Animate letters
+    var animation = anime.timeline({loop: false})
+    for (i = 0; i < elements.length; i++) {
+        animation.add({
+            targets: `#${elements[i]} .letter`,
+            opacity: [0,1],
+            easing: "easeOutExpo",
+            duration: 50,
+            offset: '-=77',
+            delay: (el, i) => 140 * (i+1)
+        })
+    }
+
+    //Add animation to elements
     animation.add({
-        targets: `#${elements[i]} .letter`,
-        opacity: [0,1],
-        easing: "easeOutExpo",
-        duration: 50,
-        offset: '-=77',
-        delay: (el, i) => 140 * (i+1)
-    })
+            targets: '#portrait',
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 450,
+        })
+        .add({
+            targets: '.main',
+            top: ['50%', '22%']
+        })
+        .add({
+            targets: '.diana-id',
+            opacity: [0, 1]
+        })
+        .add({
+            targets: '.di',
+            top: ['-65%', '-6%'],
+            easing: "easeOutExpo",
+        })
+
+    // Ignite
+    setTimeout(initFireworks, 16000);
 }
-
-//Add animation to elements
-animation.add({
-        targets: '#portrait',
-        opacity: [0, 1],
-        easing: "easeOutExpo",
-        duration: 450,
-    })
-    .add({
-        targets: '.main',
-        top: ['50%', '22%']
-    })
-    .add({
-        targets: '.diana-id',
-        opacity: [0, 1]
-    })
-    .add({
-        targets: '.di',
-        top: ['-65%', '-6%'],
-        easing: "easeOutExpo",
-    })
-
-// Ignite
-setTimeout(initFireworks, 16000);
 
 // -----------------------
 /* Fireworks */

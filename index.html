@@ -4,9 +4,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script>
+            function hey(){
+                console.log('hey!');
+            }
+        </script>
     </head>
     <body>
-        <div class="main">
+        <div class="promt">
+            <h1>Привет, у меня для тебя есть хорошие новости.</h1>
+            <button id='congratsBtn'>Получить новость</button>
+        </div>
+        <div class="main" style="display: none; ">
             <div id="id-wrapper"></div>
             <div id="portrait"></div>
             <p class="textarea" id="lname">ШИН</p>
@@ -18,9 +27,9 @@
             <p class="textarea" id="num2">99 24 421363</p>
             <p class="textarea" id="loc2">СЕВЕРНАЯ ОСЕТИЯ - АЛАНИЯ</p>
         </div>
-        <div class="diana-id"></div>
-        <div class="di"></div>
-        <canvas id="canvas"></canvas>
+        <div class="diana-id" style="display: none; "></div>
+        <div class="di" style="display: none; "></div>
+        <canvas id="canvas" style="display: none; "></canvas>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         <script src="script.js"></script>
     </body>

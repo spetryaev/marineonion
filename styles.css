@@ -2,7 +2,51 @@ body {
   overflow: hidden;
 }
 
+h1 {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: #1a1a1a;
+}
+
+.promt {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (min-device-width: 200px) {
+  .promt {
+    font-size: xx-large;
+  }
+  .promt button {
+    font-size: xx-large;
+    width: 38vw;
+    height: 6vh;
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1200px) {
+  .promt {
+    font-size: xx-large;
+  }
+}
+
+@media (min-device-width: 1200px) {
+  .promt {
+    font-size: medium;
+  }
+  .promt button {
+    font-size: medium;
+    width: 38vw;
+    height: 6vh;
+  }
+}
+
 .main {
+  opacity: 0;
   position: absolute;
   display: block;
   top: 50%;
