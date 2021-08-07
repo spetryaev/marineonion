@@ -9,16 +9,16 @@ for (i = 0; i < elements.length; i++) {
 
 // Animate letters
 var animation = anime.timeline({loop: false})
-// for (i = 0; i < elements.length; i++) {
-//     animation.add({
-//         targets: `#${elements[i]} .letter`,
-//         opacity: [0,1],
-//         easing: "easeOutExpo",
-//         duration: 50,
-//         offset: '-=77',
-//         delay: (el, i) => 140 * (i+1)
-//     })
-// }
+for (i = 0; i < elements.length; i++) {
+    animation.add({
+        targets: `#${elements[i]} .letter`,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 50,
+        offset: '-=77',
+        delay: (el, i) => 140 * (i+1)
+    })
+}
 
 //Add animation to elements
 animation.add({
@@ -42,7 +42,7 @@ animation.add({
     })
 
 // Ignite
-setTimeout(initFireworks, 1000);
+setTimeout(initFireworks, 16000);
 
 // -----------------------
 /* Fireworks */
