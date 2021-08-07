@@ -36,6 +36,7 @@ h1 {
 
 @media (min-device-width: 1200px) {
   .promt {
+    margin-left: 8vh;
     font-size: medium;
   }
   .promt button {
